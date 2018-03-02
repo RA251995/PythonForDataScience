@@ -3,18 +3,18 @@ from textblob import TextBlob
 
 import csv
 
-consumer_key = 'vNJt8x5FbY8sVvh8fdgSOcGwe'
-consumer_secret = 'isEHhqcsdvyAkXpSdW7JWMnZFKdVqXENiRjYxeeDPUGBBCjUQ7'
+consumer_key = 'CONSUMER_KEY'
+consumer_secret = 'CONSUMER_SECRET'
 
-access_token = '968800004780404736-kH8Yfoyt0OeBmI992aR2CYcbFIJTRJ1'
-access_secret = '71JKil08Cau1h3WHUKACm4Y1pLbElSM5qOuCOM0fdsVvg'
+access_token = 'ACCESS_TOKEN'
+access_secret = 'ACCESS_SECERT'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.search('Modi', count=50)
+public_tweets = api.search('SEARCH_KEY', count=50)
 
 with open('sentiments.csv', 'w') as csvfile:
 	sentiment_writer = csv.writer(csvfile)
